@@ -5,7 +5,6 @@ import { AppComponent } from './app/app.component';
 import { AdminComponent } from './app/admin.component';
 import { ProjectDetailComponent } from './app/project-detail.component';
 import { LoginComponent } from './app/login.component';
-import { environment } from './environments/environment.local';
 
 bootstrapApplication(RootComponent, {
   providers: [
