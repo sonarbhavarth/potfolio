@@ -23,12 +23,10 @@ interface Skill {
   icon: string;
 }
 
-import { ChatComponent } from './chat.component';
-
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, ChatComponent],
+  imports: [CommonModule],
   templateUrl: './app.component.html'
 })
 export class AppComponent {

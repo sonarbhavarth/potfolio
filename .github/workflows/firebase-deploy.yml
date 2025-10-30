@@ -22,7 +22,7 @@ jobs:
         run: npm install
       
       - name: Build project
-        run: npm run build
+        run: npm run build -- --configuration production --optimization --build-optimizer
       
       - name: Deploy to Firebase
         uses: FirebaseExtended/action-hosting-deploy@v0
