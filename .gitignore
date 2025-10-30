@@ -10,6 +10,7 @@ out/
 # Environment files
 .env
 .env.local
+src/environments/environment.ts
 
 # Firebase
 .firebase/

@@ -31,10 +31,14 @@ export class FirebaseService {
 
   async savePortfolioData(data: any): Promise<boolean> {
     try {
+      console.log('Attempting to save to Firebase...');
       await this.db.collection('portfolio').doc('data').set(data);
+      console.log('Successfully saved to Firebase');
       return true;
-    } catch (error) {
-      console.error('Error saving data:', error);
+    } catch (error: any) {
+      console.error('Firebase save error:', error);
+      console.error('Error code:', error.code);
+      console.error('Error message:', error.message);
       return false;
     }
   }

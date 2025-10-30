@@ -230,12 +230,15 @@ export class AdminComponent {
 
   async save() {
     const data = { profile: this.profile, projects: this.projects, skills: this.skills };
+    console.log('Saving data:', data);
     const success = await this.firebase.savePortfolioData(data);
     if (success) {
       localStorage.setItem('portfolioData', JSON.stringify(data));
       alert('Changes saved to Firebase!');
     } else {
-      alert('Error saving to Firebase. Check console.');
+      console.error('Failed to save to Firebase');
+      alert('Error saving to Firebase. Data saved locally. Check browser console for details.');
+      localStorage.setItem('portfolioData', JSON.stringify(data));
     }
   }
 
